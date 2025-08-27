@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "functions": {
+    "api/chat.js": {
+      "maxDuration": 30
+    },
+    "api/search.js": {
+      "maxDuration": 10
+    }
+  },
+  "env": {
+    "OPENROUTER_API_KEY": "@openrouter_api_key",
+    "GOOGLE_SEARCH_API_KEY": "@google_search_api_key",
+    "GOOGLE_CSE_ID": "@google_cse_id"
+  }
+}
