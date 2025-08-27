@@ -7,8 +7,8 @@ export default async function handler(req, res) {
   try {
     const { query } = req.body;
     
-    const apiKey = process.env.GOOGLE_SEARCH_API_KEY;
-    const cx = process.env.GOOGLE_CSE_ID;
+    const apiKey = process.env.google_search_api_key;
+    const cx = process.env.google_cse_id;
     const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${encodeURIComponent(query)}`;
 
     const response = await fetch(url);

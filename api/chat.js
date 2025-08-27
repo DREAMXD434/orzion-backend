@@ -33,8 +33,8 @@ export default async function handler(req, res) {
     // Función de búsqueda web integrada
     async function googleSearch(query) {
       try {
-        const apiKey = process.env.GOOGLE_SEARCH_API_KEY;
-        const cx = process.env.GOOGLE_CSE_ID;
+        const apiKey = process.env.google_search_api_key;
+        const cx = process.env.google_cse_id;
         const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${encodeURIComponent(query)}`;
         
         const response = await fetch(url);
@@ -73,7 +73,7 @@ export default async function handler(req, res) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`
+          'Authorization': `Bearer ${process.env.openrouter_api_key}`
         },
         body: JSON.stringify({
           model: openRouterModel,
@@ -95,7 +95,7 @@ export default async function handler(req, res) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`
+        'Authorization': `Bearer ${process.env.openrouter_api_key}`
       },
       body: JSON.stringify({
         model: openRouterModel,
